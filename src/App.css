@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  font-family: 'Cabin', sans-serif;
+  background-color: #222531;
+  color: #fff;
+  height: 100%;
+}
+
+h1 {
+  margin: 0;
+  padding: 0 0 1.25rem;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0 .5rem 0 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(0.2em);
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--todoItem-color);
+}
+
+input[type="checkbox"]:checked {
+  background-color: #A10505;
+}
+
+.todoItem + .todoItem {
+  margin-top: 1em;
+}
+
+.todoItem {
+  width: 100%;
+  font-size: 18px;
+}
+
+.appWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #414d62;
+  color: #fff;
+  padding: 2rem 2.5rem 2rem 2.5rem;
+  border-radius: 1rem;
+  margin-top: 5vh;
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: .5rem;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.inputSection {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .5rem .5rem .5rem;
+}
+
+.inputSection>input {
+  background-color: #fff;
+  color: #222531;
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin-right: .5rem;
+  border: #222531 .125rem solid;
+  border-radius: 100rem;
+  padding: .25rem 1rem .25rem 1rem;
+}
+
+.buttons>button {
+  padding: .5rem 1rem .5rem 1rem;
+  margin: 0 .25rem;
+  background-color: #A10505;
+  cursor: pointer;               
+  border:#222531 solid 0em;             
+  border-radius: 100rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+}
+
+.buttons>button:hover {
+  background-color: #222531;
+  transition: ease-in .25s;
+}
+
+.remainder {
+  padding-top: 1rem;
+  font-size: 20px;
+}
